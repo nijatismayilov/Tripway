@@ -1,0 +1,149 @@
+.header {
+    height: 15rem;
+}
+
+.connections {
+    height: 4rem;
+    background-color: $color-primary-dark;
+
+    .container {
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.contacts {
+    display: flex;
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        @include fontRobotoMedium;
+        font-size: 1.2rem;
+        color: $color-text-lighter;
+
+        &,
+        i,
+        span {
+            transition: all .4s ease-in;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+
+        &:hover > * {
+            color: $color-white;
+        }
+    }
+
+    &__icon {
+        margin-right: 1rem;
+        transform: translateY(-.1rem);
+
+        &--1 {
+            font-size: 1.7rem;
+        }
+
+        &--2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+
+    &__item-box {
+        &:not(:last-child) {
+            margin-right: 1.8rem;
+        }
+    }
+
+    &__item-link {
+        text-decoration: none;
+
+        &:hover > * {
+            color: $color-white;
+        }
+    }
+
+    &__item-icon {
+        font-size: 1.6rem;
+        color: $color-text-lighter;
+        transition: all .4s ease-in;
+        backface-visibility: none;
+    }
+}
+
+.navigation {
+    height: 15rem - 4rem;
+    background-color: $color-primary-light;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        @include fontRobotoRegular;
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &__icon {
+        margin-right: .9rem;
+    }
+
+    &__text {
+        font-size: 3rem;
+    }
+}
+
+.nav {
+    display: flex;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        @include fontRobotoRegular;
+        font-size: 1.6rem;
+    }
+
+    &__item {
+        text-transform: uppercase;
+
+        &:not(:first-child) {
+            margin-left: 4rem;
+        }
+
+        &:hover > a {
+            color: $color-text-lighter;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        transition: all .5s;
+    }
+}
