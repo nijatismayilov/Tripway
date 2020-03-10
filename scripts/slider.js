@@ -10,18 +10,20 @@ const size = sliderItems[0].clientWidth;
 
 slider.style.transform = `translateX(${ -size * counter }px)`;
 
+const slide = (direction) => {
+    slider.style.transition = 'transform 1.5s ease-in-out';
+    direction === 'right' ? counter++ : counter--;
+    slider.style.transform = `translateX(${ -size * counter }px)`;
+}
+
 btnNext.addEventListener('click', () => {
     if (counter >= (sliderItems.length - 1)) return;
-    slider.style.transition = 'transform 0.4s ease-in-out';
-    counter++;
-    slider.style.transform = `translateX(${ -size * counter }px)`;
+    slide('right');
 });
 
 btnPrev.addEventListener('click', () => {
     if (counter <= 0) return;
-    slider.style.transition = 'transform 0.4s ease-in-out';
-    counter--;
-    slider.style.transform = `translateX(${ -size * counter }px)`;
+    slide('left');
 });
 
 slider.addEventListener('transitionend', () => {
@@ -37,3 +39,27 @@ slider.addEventListener('transitionend', () => {
         slider.style.transform = `translateX(${ -size * counter }px)`;
     }
 });
+
+let rotating = true;
+let sliderSpeed = 4500;
+let slideDirection = 'right';
+
+slider.addEventListener('mouseover', () => {
+    rotating = false;
+})
+
+btnNext.addEventListener('mouseover', () => {
+    rotating = false;
+})
+
+btnPrev.addEventListener('mouseover', () => {
+    rotating = false;
+})
+
+slider.addEventListener('mouseout', () => {
+    rotating = true;
+})
+
+const infiniteSlider = setInterval(() => {
+    rotating ? slide(slideDirection) : {};
+}, sliderSpeed);
