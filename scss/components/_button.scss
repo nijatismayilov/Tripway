@@ -1,7 +1,6 @@
 .btn {
     text-decoration: none;
     text-transform: capitalize;
-    color: $color-white;
     @include fontRobotoRegular;
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
@@ -13,6 +12,7 @@
 
     &--pink {
         background-color: $color-pink;
+        color: $color-white;
     }
 
     &:hover {
@@ -39,5 +39,29 @@
 
     &--right {
         right: 1%;
+    }
+}
+
+.btn-form {
+    text-transform: capitalize;
+    @include fontRobotoMedium;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    transition: all .5s;
+    border: 1px solid $color-gray;
+    cursor: pointer;
+
+    &--white {
+        background-color: $color-white;
+        color: $color-pink;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
+    }
+
+    &--white:hover {
+        color: $color-pink-darker;
     }
 }

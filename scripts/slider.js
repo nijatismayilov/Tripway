@@ -6,7 +6,11 @@ const btnNext = document.querySelector('#btn-next');
 
 let counter = 1;
 
-const size = sliderItems[0].clientWidth;
+let size = sliderItems[0].clientWidth;
+const resize = () => {
+    size = sliderItems[0].clientWidth;
+}
+window.onresize = resize;
 
 slider.style.transform = `translateX(${ -size * counter }px)`;
 
