@@ -1,3 +1,8 @@
+@mixin fontRobotoLight {
+    font-family: $font-roboto, sans-serif;
+    font-weight: 300;
+}
+
 @mixin fontRobotoRegular {
     font-family: $font-roboto, sans-serif;
     font-weight: 400;
