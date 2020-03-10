@@ -44,6 +44,15 @@ body {
   text-transform: capitalize;
   margin-bottom: 2.5rem; }
 
+.heading-secondary {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 3rem; }
+  .heading-secondary--light {
+    color: #fff; }
+  .heading-secondary--dark {
+    color: #3e3e3e; }
+
 .heading-tertiary {
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -401,6 +410,85 @@ body {
   .btn-slider--right {
     right: 1%; }
 
+.card {
+  width: 95%;
+  height: 40rem;
+  cursor: pointer;
+  position: relative;
+  perspective: 80rem;
+  margin: 0 auto 2rem; }
+  .card__side {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: rotateY(180deg); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__img-box {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+    .card__img-box--1 {
+      background-image: url(../img/destination-1.jpg); }
+    .card__img-box--2 {
+      background-image: url(../img/destination-2.jpg); }
+    .card__img-box--3 {
+      background-image: url(../img/destination-3.jpg); }
+    .card__img-box--4 {
+      background-image: url(../img/destination-4.jpg); }
+    .card__img-box--5 {
+      background-image: url(../img/destination-5.jpg); }
+    .card__img-box--6 {
+      background-image: url(../img/destination-6.jpg); }
+  .card__content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.5rem; }
+  .card__desc {
+    max-width: 90%;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #777777; }
+  .card__price {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 3.5rem;
+    color: #653eb3; }
+  .card__text {
+    max-width: 80%;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #777777;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+
 .feature-item {
   width: 95%;
   display: flex;
@@ -756,8 +844,8 @@ body {
   .section-contact .container {
     justify-content: space-between;
     align-items: center; }
-  .section-contact__text {
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
-    color: #fff; }
+
+.section-destinations {
+  background-color: #fafafa; }
+  .section-destinations .container {
+    flex-direction: column; }

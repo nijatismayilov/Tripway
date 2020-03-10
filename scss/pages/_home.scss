@@ -31,10 +31,12 @@
         justify-content: space-between;
         align-items: center;
     }
+}
 
-    &__text {
-        @include fontRobotoLight;
-        font-size: 3rem;
-        color: $color-white;
+.section-destinations {
+    background-color: $color-bg;
+
+    .container {
+        flex-direction: column;
     }
 }
