@@ -109,6 +109,37 @@ body {
 .u-text-capital {
   text-transform: capitalize !important; }
 
+.btn {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  transition: all .5s; }
+  .btn-round {
+    border-radius: 4px; }
+  .btn--pink {
+    background-color: #fb4381; }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.2); }
+  .btn--pink:hover {
+    background-color: #f51f66; }
+
+.btn-slider {
+  position: absolute;
+  top: 40%;
+  font-size: 8rem;
+  color: #fff;
+  padding: 1rem 4rem;
+  background-color: rgba(62, 62, 62, 0.5); }
+  .btn-slider--left {
+    left: 1%; }
+  .btn-slider--right {
+    right: 1%; }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -257,11 +288,11 @@ body {
     width: 0.69444%; } }
 
 .header {
-  height: 15rem; }
+  height: 12rem; }
 
 .connections {
-  height: 4rem;
-  background-color: #5031a4; }
+  height: 3.5rem;
+  background-color: rgba(80, 49, 164, 0.8); }
   .connections .container {
     justify-content: space-between;
     height: 100%; }
@@ -312,8 +343,8 @@ body {
     backface-visibility: none; }
 
 .navigation {
-  height: 11rem;
-  background-color: #653eb3; }
+  height: 8.5rem;
+  background-color: rgba(101, 62, 179, 0.8); }
   .navigation .container {
     display: flex;
     justify-content: space-between;
@@ -353,3 +384,58 @@ body {
     text-decoration: none;
     color: #fff;
     transition: all .5s; }
+
+.slider {
+  display: flex;
+  height: 100%; }
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%; }
+  .slider-item__img-box {
+    height: 85vh;
+    overflow: hidden;
+    position: relative; }
+    .slider-item__img-box .bg-half-transparent {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2)); }
+  .slider-item__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .slider-item__info-box {
+    display: flex;
+    height: 15vh; }
+    .slider-item__info-box .container {
+      height: 100%;
+      justify-content: space-between;
+      align-items: center; }
+  .slider-item__name {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #3e3e3e; }
+  .slider-item__text {
+    max-width: 50%;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #777777; }
+
+.section-famous-places {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #e1e1e1; }

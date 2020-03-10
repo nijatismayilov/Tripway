@@ -1,0 +1,43 @@
+.btn {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $color-white;
+    @include fontRobotoRegular;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    transition: all .5s;
+
+    &-round {
+        border-radius: 4px;
+    }
+
+    &--pink {
+        background-color: $color-pink;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
+    }
+
+    &--pink:hover {
+        background-color: $color-pink-darker;
+    }
+}
+
+.btn-slider {
+    position: absolute;
+    top: 40%;
+    font-size: 8rem;
+    color: $color-white;
+    padding: 1rem 4rem;
+    background-color: rgba($color-text-dark, .5);
+
+    &--left {
+        left: 1%;
+    }
+
+    &--right {
+        right: 1%;
+    }
+}

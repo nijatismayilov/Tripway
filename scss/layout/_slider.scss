@@ -1,0 +1,60 @@
+.slider {
+    display: flex;
+    height: 100%;
+}
+
+.slider-item {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+
+
+    &__img-box {
+        height: 85vh;
+        overflow: hidden;
+        position: relative;
+
+        .bg-half-transparent {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to right bottom, 
+                                            rgba($color-white, .15), 
+                                            rgba($color-black, .2));
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__info-box {
+        display: flex;
+        height: 15vh;
+
+        .container {
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__name {
+        @include fontRobotoMedium;
+        font-size: 3rem;
+        color: $color-text-dark;
+    }
+
+    &__text {
+        max-width: 50%;
+        @include fontRobotoRegular;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $color-text-light-1;
+    }
+}
