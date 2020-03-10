@@ -1,0 +1,45 @@
+.feature-item {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 1rem 0;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    &__icon {
+        color: $color-pink;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        transition: all .4s ease-in;
+    }   
+
+    &__text {
+        max-width: 90%;
+        @include fontRobotoRegular;
+        font-size: 1.5rem;
+        line-height: 1.7;
+        color: $color-text-light-1;
+
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+
+    &:hover {
+        border-color: rgba($color-text-light-2, .3);
+        transform: translateY(-.5rem);
+        box-shadow: 0 .5rem .5rem rgba($color-black, .1);
+    }
+
+    &:hover &__icon {
+        color: $color-pink-darker;
+    }
+
+    &:hover &__text {
+        color: $color-text-medium;
+    }
+}
