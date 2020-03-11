@@ -19,6 +19,7 @@ slider.style.transform = `translateX(${ -size * counter }px)`;
 const slide = (direction) => {
     slider.style.transition = 'transform 1.5s ease-in-out';
     direction === 'right' ? counter++ : counter--;
+    console.log(counter);
     slider.style.transform = `translateX(${ -size * counter }px)`;
 }
 
