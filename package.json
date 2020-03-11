@@ -17,10 +17,18 @@
   },
   "homepage": "https://github.com/nicatismayilov/Tripway#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.1",
-    "sas": "^3.0.4",
-    "sass": "^1.26.2"
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^7.0.27",
+    "run-sequence": "^2.2.1"
   }
 }
