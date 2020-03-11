@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: .1rem solid $color-gray;
 }
 
 .section-about {
@@ -35,7 +35,7 @@
 
 .section-destinations {
     background-color: $color-bg;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: .1rem solid $color-gray;
 
     .container {
         flex-direction: column;
@@ -44,9 +44,32 @@
 
 .section-subscribe {
     background-color: $color-white;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: .1rem solid $color-gray;
     
     .container {
         justify-content: space-between;
+    }
+}
+
+.section-testimonials {
+    background-color: $color-bg;
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .row > * {
+        transition: all .5s ease-in-out;
+    }
+
+    .row:hover > :not(:hover) {
+        filter: blur(.3rem);
+    }
+
+    .row:hover > :hover > .feedback {
+        transform: translateY(-.5rem);
+        filter: brightness(105%);
+        box-shadow: 0 1.5rem 2rem rgba($color-black, .25);
     }
 }
