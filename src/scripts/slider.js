@@ -9,6 +9,8 @@ let counter = 1;
 let size = sliderItems[0].clientWidth;
 const resize = () => {
     size = sliderItems[0].clientWidth;
+    counter = 1;
+    slider.style.transform = `translateX(${-size * counter}px)`;
 }
 window.onresize = resize;
 
