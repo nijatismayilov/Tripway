@@ -64,6 +64,7 @@
 
     .row:hover > :not(:hover) {
         filter: blur(.3rem);
+        transform: scale(.975);
     }
 
     .row:hover > :hover > .feedback {

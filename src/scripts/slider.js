@@ -17,19 +17,18 @@ window.onresize = resize;
 slider.style.transform = `translateX(${ -size * counter }px)`;
 
 const slide = (direction) => {
+    if (counter >= (sliderItems.length - 1) || counter <= 0) return;
+
     slider.style.transition = 'transform 1.5s ease-in-out';
     direction === 'right' ? counter++ : counter--;
-    console.log(counter);
     slider.style.transform = `translateX(${ -size * counter }px)`;
 }
 
 btnNext.addEventListener('click', () => {
-    if (counter >= (sliderItems.length - 1)) return;
     slide('right');
 });
 
 btnPrev.addEventListener('click', () => {
-    if (counter <= 0) return;
     slide('left');
 });
 

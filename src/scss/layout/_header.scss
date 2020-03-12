@@ -148,7 +148,14 @@
 
     &__link {
         text-decoration: none;
-        color: $color-white;
         transition: all .5s;
+
+        &--white {
+            color: $color-white;
+        }
+
+        &--gray {
+            color: $color-text-light-2;
+        }
     }
 }
