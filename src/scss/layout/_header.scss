@@ -39,7 +39,7 @@
         &,
         i,
         span {
-            transition: all .4s ease-in;
+            transition: all 400ms ease-in;
         }
 
         span {
@@ -86,7 +86,7 @@
     &__item-icon {
         font-size: 1.6rem;
         color: $color-text-light-2;
-        transition: all .4s ease-in;
+        transition: all 400ms ease-in;
         backface-visibility: none;
     }
 }
@@ -148,7 +148,7 @@
 
     &__link {
         text-decoration: none;
-        transition: all .5s;
+        transition: all 500ms;
 
         &--white {
             color: $color-white;

@@ -4,10 +4,10 @@
     @include fontRobotoRegular;
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
-    transition: all .5s;
+    transition: all 500ms;
 
     &-round {
-        border-radius: 4px;
+        border-radius: .4rem;
     }
 
     &--pink {
@@ -16,7 +16,7 @@
     }
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-.2rem);
         box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
     }
 
@@ -47,8 +47,8 @@
     @include fontRobotoMedium;
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
-    transition: all .5s;
-    border: 1px solid $color-gray;
+    transition: all 500ms;
+    border: .1rem solid $color-gray;
     cursor: pointer;
 
     &--white {
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-.2rem);
         box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
     }
 

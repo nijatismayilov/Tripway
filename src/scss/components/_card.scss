@@ -9,14 +9,14 @@
     &__side {
         height: 100%;
         width: 100%;
-        border-radius: 6px;
+        border-radius: .6rem;
         overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
         transition: transform 1s ease-in-out;
         backface-visibility: hidden;
-        border: 1px solid $color-bg-dark;
+        border: .1rem solid $color-bg-dark;
         box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
 
         &--front {
