@@ -39,6 +39,12 @@
     .container {
         flex-direction: column;
     }
+
+    @media (max-width: 550px) {
+        .row {
+            justify-content: center;
+        }
+    }
 }
 
 .section-subscribe {
