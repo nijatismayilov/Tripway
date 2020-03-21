@@ -39,21 +39,19 @@
         color: $color-pink-darker;
 
         &--map {
-            transform: rotateY(180deg);
+            animation: rotateAround-Y-Axis 400ms ease-in forwards;
         }
 
         &--ring {
-            transform: rotateX(180deg);
+            animation: rotateAround-X-Axis 400ms ease-in forwards;
         }
 
         &--globe {
-            transform: rotateZ(360deg);
+            animation: rotateAround-Z-Axis 400ms ease-in forwards;
         }
 
         &--plane {
-            animation-name: moveRightAndFadeOut;
-            animation-duration: 500ms;
-            animation-timing-function: ease;
+            animation: moveRightAndFadeOut 400ms ease forwards;
         }
     }
 

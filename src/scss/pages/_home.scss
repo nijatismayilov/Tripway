@@ -1,6 +1,6 @@
 .section-famous-places {
     display: flex;
-    z-index: -1;
+    position: relative;
     width: 100%;
     overflow: hidden;
     border-bottom: .1rem solid $color-gray;
@@ -21,6 +21,34 @@
         line-height: 1.7;
         color: $color-text-light-1;
     }
+
+    @include respond(tab-port) {
+        &__text {
+            font-size: 1.6rem;
+        }
+
+        .row {
+            justify-content: center;
+
+            & > * {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    @include respond(phone) {
+        &__text {
+            font-size: 1.6rem;
+        }
+
+        .row {
+            justify-content: center;
+
+            & > :not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
 }
 
 .section-contact {
@@ -40,7 +68,7 @@
         flex-direction: column;
     }
 
-    @media (max-width: 550px) {
+    @include respond(phone) {
         .row {
             justify-content: center;
         }
@@ -53,6 +81,13 @@
     
     .container {
         justify-content: space-between;
+    }
+
+    @include respond(tab-port) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -77,5 +112,11 @@
         transform: translateY(-.5rem);
         filter: brightness(105%);
         box-shadow: 0 1.5rem 2rem rgba($color-black, .25);
+    }
+
+    @include respond(tab-port) {
+        .row {
+            justify-content: center;
+        }
     }
 }
