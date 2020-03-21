@@ -35,6 +35,14 @@
     color: $color-text-dark;
     text-transform: capitalize;
     margin-bottom: 2.5rem;
+
+    @include respond(tab-port) {
+        font-size: 4rem;
+    }
+
+    @include respond(phonet) {
+        font-size: 3.5rem;
+    }
 }
 
 .heading-secondary {
@@ -48,6 +56,14 @@
     &--dark {
         color: $color-text-dark;
     }
+
+    @include respond(tab-port) {
+        font-size: 2.8rem;
+    }
+
+    @include respond(phonet) {
+        font-size: 2.5rem;
+    }
 }
 
 .heading-tertiary {
@@ -56,4 +72,12 @@
     color: $color-text-dark;
     text-transform: capitalize;
     margin-bottom: 1.2rem;
+
+    @include respond(tab-port) {
+        font-size: 2rem;
+    }
+
+    @include respond(phonet) {
+        font-size: 1.9rem;
+    }
 }

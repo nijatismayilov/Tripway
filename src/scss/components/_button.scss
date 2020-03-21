@@ -1,13 +1,18 @@
 .btn {
     text-decoration: none;
     text-transform: capitalize;
+    text-align: center;
     @include fontRobotoRegular;
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
-    transition: all .5s;
+    transition: all 500ms;
 
     &-round {
-        border-radius: 4px;
+        border-radius: .4rem;
+    }
+
+    &-circle {
+        border-radius: 100%;
     }
 
     &--pink {
@@ -16,22 +21,95 @@
     }
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-.2rem);
         box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
     }
 
     &--pink:hover {
         background-color: $color-pink-darker;
     }
+
+    @include respond(tab-port) {
+        font-size: 1.3rem;
+        padding: .8rem 1.3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1rem;
+        padding: .6rem 1rem;
+    }
+}
+
+.btn-burger {
+    height: 6rem;
+    width: 6rem;
+    background-color: rgba($color-primary-light-2, 1);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+
+    &__line {
+        height: .2rem;
+        width: 50%;
+        background-color: $color-white;
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+            transition: all 200ms;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            height: .2rem;
+            width: 100%;
+            background-color: $color-white;
+            position: absolute;
+            z-index: 10;
+        }
+
+        &::before {
+            top: -.9rem;
+        }
+
+        &::after {
+            bottom: -.9rem;
+        }
+    }
+
+    &:hover &__line {
+        &::before {
+            top: -.6rem;
+        }
+
+        &::after {
+            bottom: -.6rem;
+        }
+    }
+
+    @include respond(phone) {
+        display: flex;
+    }
+}
+
+#burger {
+    display: none;
+
+    &:checked + .nav {
+        display: flex;
+    }
 }
 
 .btn-slider {
     position: absolute;
-    top: 40%;
+    top: 32.5%;
     font-size: 8rem;
     color: $color-white;
     padding: 1rem 4rem;
-    background-color: rgba($color-text-dark, .5);
+    background-color: rgba($color-text-dark, .05);
 
     &--left {
         left: 1%;
@@ -40,6 +118,10 @@
     &--right {
         right: 1%;
     }
+
+    @include respond(tab-port) {
+        pad: .5rem 3rem;
+    }
 }
 
 .btn-form {
@@ -47,8 +129,8 @@
     @include fontRobotoMedium;
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
-    transition: all .5s;
-    border: 1px solid $color-gray;
+    transition: all 500ms;
+    border: .1rem solid $color-gray;
     cursor: pointer;
 
     &--white {
@@ -57,7 +139,7 @@
     }
 
     &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-.2rem);
         box-shadow: 0 .8rem 1.2rem rgba($color-black, .2);
     }
 

@@ -17,11 +17,11 @@
         color: $color-text-dark;
 
         border: none;
-        border-bottom: 1px solid $color-gray;
+        border-bottom: .1rem solid $color-gray;
 
         margin-right: 1.5rem;
         padding: 0 .5rem;
-        transition: all .4s;
+        transition: all 400ms;
 
         &::-webkit-input-placeholder {
             color: $color-text-light-2;
@@ -48,12 +48,16 @@
         position: absolute;
         top: 110%;
         left: 2%;
-        transition: all .5s ease-in;
+        transition: all 500ms ease-in;
     }
 
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: none;
         transform: translateY(-.4rem);
+    }
+
+    @include respond(tab-port) {
+        margin-top: 2.5rem;
     }
 }

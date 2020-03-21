@@ -52,7 +52,7 @@ gulp.task('clean', () => del(['dist']));
 
 gulp.task('default', gulp.series('clean', 'styles', 'scripts', 'pages', 'images', 'fonts'));
 
-gulp.task('watch', function () {
+gulp.task('watch', () => {
     gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))
     gulp.watch("./src/scripts/**/*.js", gulp.series("scripts"));
     gulp.watch("./src/**/*.html", gulp.series("pages"));

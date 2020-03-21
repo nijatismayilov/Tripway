@@ -1,19 +1,19 @@
 .header {
-    height: 12rem;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 2;
 }
 
 .connections {
-    height: 3.5rem;
-    background-color: rgba($color-primary-dark, .8);
+    background-color: rgba($color-primary-dark, 1);
+    padding: .75rem 0;
 
     .container {
         justify-content: space-between;
-        height: 100%;
+        height: inherit;
+    }
+
+    @include respond(phone) {
+        display: none;
     }
 }
 
@@ -39,7 +39,7 @@
         &,
         i,
         span {
-            transition: all .4s ease-in;
+            transition: all 400ms ease-in;
         }
 
         span {
@@ -61,6 +61,12 @@
 
         &--2 {
             font-size: 1.5rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        &__icon {
+            transform: translateY(0);
         }
     }
 }
@@ -86,27 +92,40 @@
     &__item-icon {
         font-size: 1.6rem;
         color: $color-text-light-2;
-        transition: all .4s ease-in;
+        transition: all 400ms ease-in;
         backface-visibility: none;
     }
 }
 
 .navigation {
-    height: 12rem - 3.5rem;
-    background-color: rgba($color-primary-light, .8);
+    height: 8.5rem;
+    background-color: rgba($color-primary-light, 1);
+    position: relative;
 
     .container {
-        display: flex;
         justify-content: space-between;
-        height: 100%;
+        height: inherit;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include respond(phone) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 }
 
 .logo {
+    height: inherit;
     display: flex;
     align-items: center;
 
     &__link {
+        height: inherit;
         display: flex;
         align-items: center;
         @include fontRobotoRegular;
@@ -115,11 +134,28 @@
     }
 
     &__icon {
-        margin-right: .9rem;
+        height: 50%;
+        filter: invert(100%) sepia(5%) 
+                saturate(2%) hue-rotate(360deg) 
+                brightness(106%) contrast(100%);
+        object-fit: contain;
+        margin-right: .5rem;
+
+        @include respond(tab-land) {
+            height: 100%;
+        }
     }
 
     &__text {
         font-size: 3rem;
+    }
+
+    @include respond(tab-land) {
+        height: 60%;
+
+        &__text {
+            font-size: 2.6rem;
+        }
     }
 }
 
@@ -136,19 +172,65 @@
 
     &__item {
         text-transform: uppercase;
+        transition: all 500ms;
+        backface-visibility: none;
+        cursor: pointer;
 
         &:not(:first-child) {
             margin-left: 4rem;
-        }
-
-        &:hover > a {
-            color: $color-text-light-2;
         }
     }
 
     &__link {
         text-decoration: none;
-        color: $color-white;
-        transition: all .5s;
+        transition: all 500ms;
+
+        &--white {
+            color: $color-white;
+        }
+
+        &--gray {
+            color: $color-text-light-2;
+        }
+    }
+
+    @include respond(tab-port) {
+        &__list {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include respond(phone) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+        background-color: rgba($color-primary-light, .75);
+        animation: scaleFromTinyToBig 500ms ease-in 1;
+        transform-origin: 50% 0;
+
+        &__list {
+            flex-direction: column;
+            padding: 4.5rem 6.5rem;
+            font-size: 2rem;
+        }
+
+        &__item {
+            padding: .5rem 1.5rem;
+            border-radius: .5rem;
+
+            &:not(:first-child) {
+                margin-left: 0;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 3.5rem;
+            }
+
+            &:hover {
+                background-color: rgba($color-white, .2);
+            }
+        }
     }
 }
